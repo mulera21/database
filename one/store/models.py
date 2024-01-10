@@ -6,7 +6,7 @@ class Geek(models.Model):
     # fields of the model
     title = models.CharField(max_length = 200)
     description = models.TextField()
-    image = models.FileField(upload_to="project_images/", blank=True)
+    image = models.FileField(upload_to="project_imag", blank=True)
 
     # renames the instances of the model
     # with their title name

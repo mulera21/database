@@ -1,0 +1,48 @@
+<div class="main">
+  {% for data in product %}.
+
+  <h1>{{ data.title }}</h1>
+  <br />
+  <img src="{{ data.images }}" alt="" width="200" height="200" /><br />
+
+  {{ data.description }}<br />
+  <hr />
+
+  {% endfor %}
+
+  <!-- BEGIN: Test Cases -->
+  <div class="test-cases">
+    <!-- Test Case 1: Empty product list -->
+    <div class="test-case">
+      <h2>Test Case 1: Empty product list</h2>
+      {% for data in product %}
+      <!-- No products should be displayed -->
+      {% endfor %}
+    </div>
+
+    <!-- Test Case 2: Single product -->
+    <div class="test-case">
+      <h2>Test Case 2: Single product</h2>
+      {% for data in product %}
+      <h1>{{ data.title }}</h1>
+      <br />
+      <img src="{{ data.images }}" alt="" width="200" height="200" /><br />
+      {{ data.description }}<br />
+      <hr />
+      {% endfor %}
+    </div>
+
+    <!-- Test Case 3: Multiple products -->
+    <div class="test-case">
+      <h2>Test Case 3: Multiple products</h2>
+      {% for data in product %}
+      <h1>{{ data.title }}</h1>
+      <br />
+      <img src="{{ data.images }}" alt="" width="200" height="200" /><br />
+      {{ data.description }}<br />
+      <hr />
+      {% endfor %}
+    </div>
+  </div>
+  <!-- END: Test Cases -->
+</div>
